@@ -1,6 +1,6 @@
 class Image {
   // attributes
-  Image image;
+  String imagePath;
   String title;
   String date;
   String description = 'No Description';
@@ -8,7 +8,7 @@ class Image {
   // constructor
   Image(
     this.description, {
-    required this.image,
+    required this.imagePath,
     required this.title,
     required this.date,
   });
