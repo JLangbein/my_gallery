@@ -1,15 +1,15 @@
-class Image {
+class MyImage {
   // attributes
   String imagePath;
   String title;
   String date;
-  String description = 'No Description';
+  String description;
 
   // constructor
-  Image(
-    this.description, {
+  MyImage({
     required this.imagePath,
     required this.title,
     required this.date,
+    required this.description,
   });
 }
