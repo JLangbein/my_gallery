@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_gallery/gallery_screen.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -10,7 +11,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
       ),
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+      home: GalleryScreen(),
     );
   }
 }
