@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_gallery/image_gallery_card.dart';
 
 class GalleryScreen extends StatelessWidget {
   const GalleryScreen({super.key});
@@ -16,10 +17,8 @@ class GalleryScreen extends StatelessWidget {
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
-      body: 
-        Center(child: Card(
-          
-        )
+      body: Center(
+        child: ImageGalleryCard(),
       ),
     );
   }
