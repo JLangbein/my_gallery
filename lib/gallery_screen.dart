@@ -15,6 +15,8 @@ class GalleryScreen extends StatelessWidget {
               (currentImage) => ImageGalleryCard(
                 imagePath: currentImage.imagePath,
                 title: currentImage.title,
+                date: currentImage.date,
+                description: currentImage.description,
               ),
             )
             .toList(),

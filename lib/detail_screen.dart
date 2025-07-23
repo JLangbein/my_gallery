@@ -18,21 +18,17 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Details'), automaticallyImplyLeading: true),
+      appBar: AppBar(
+        title: Text('Details'),
+        automaticallyImplyLeading: true,
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: Column(
           spacing: 16.0,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Expanded(
-              flex: 3,
-              child: Image.asset(
-                imagePath,
-                fit: BoxFit.cover,
-                width: double.infinity,
-                cacheHeight: 800,
-              ),
-            ),
+            Image.asset(imagePath, fit: BoxFit.contain, cacheHeight: 800),
             Padding(
               padding: EdgeInsetsGeometry.all(16.0),
               child: Column(
