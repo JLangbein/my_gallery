@@ -16,10 +16,15 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
+    var colorScheme2 = ColorScheme.fromSeed(seedColor: Colors.teal);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        colorScheme: colorScheme2,
+        appBarTheme: AppBarTheme(
+          backgroundColor: colorScheme2.primary,
+          foregroundColor: colorScheme2.onPrimary
+        ),
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -31,12 +36,15 @@ class _MainAppState extends State<MainApp> {
               color: Theme.of(context).colorScheme.onPrimary,
             ),
           ),
-          backgroundColor: Theme.of(context).colorScheme.primary,
+         // backgroundColor: Theme.of(context).colorScheme.primary,
         ),
         bottomNavigationBar: NavigationBar(
           destinations: [
-            NavigationDestination(icon: Icon(Icons.image), label: 'Immages'),
-            NavigationDestination(icon: Icon(Icons.person), label: 'About Me'),
+            NavigationDestination(icon: Icon(Icons.image), label: 'Images'),
+            NavigationDestination(
+              icon: Icon(Icons.person),
+              label: 'About Me',
+            ),
           ],
           selectedIndex: _currentIndex,
           onDestinationSelected: (int index) {
