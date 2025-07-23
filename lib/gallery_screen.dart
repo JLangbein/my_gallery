@@ -8,6 +8,7 @@ class GalleryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         automaticallyImplyLeading: true,
         title: Text(
           'MyGallery',
@@ -17,9 +18,7 @@ class GalleryScreen extends StatelessWidget {
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
-      body: Center(
-        child: ImageGalleryCard(),
-      ),
+      body: Center(child: ImageGalleryCard()),
     );
   }
 }
