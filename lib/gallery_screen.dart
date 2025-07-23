@@ -6,19 +6,6 @@ class GalleryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        automaticallyImplyLeading: true,
-        title: Text(
-          'MyGallery',
-          style: Theme.of(context).textTheme.titleLarge!.copyWith(
-            color: Theme.of(context).colorScheme.onPrimary,
-          ),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-      ),
-      body: Center(child: ImageGalleryCard()),
-    );
+    return Center(child: Text('Gallery Screen'));
   }
 }
